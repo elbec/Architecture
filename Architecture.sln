@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLHelper", "SQLHelper\SQLHelper.csproj", "{AD997A56-24E2-4A24-89D4-E8DA0925EB53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Architecture", "Architecture\Architecture.csproj", "{260F67BD-8E1F-418F-9249-5D5E947048B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AD997A56-24E2-4A24-89D4-E8DA0925EB53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD997A56-24E2-4A24-89D4-E8DA0925EB53}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD997A56-24E2-4A24-89D4-E8DA0925EB53}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD997A56-24E2-4A24-89D4-E8DA0925EB53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{260F67BD-8E1F-418F-9249-5D5E947048B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{260F67BD-8E1F-418F-9249-5D5E947048B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{260F67BD-8E1F-418F-9249-5D5E947048B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{260F67BD-8E1F-418F-9249-5D5E947048B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
