@@ -23,7 +23,7 @@ namespace Architecture
                     }
                     catch (SqlException ex)
                     {
-                        WriteSqlExceptionToConsole(ex);
+                        throw new CustomSqlException("Execption thrown by LoadDataTable() in Architecture: ", ex);
                     }
                 }
             }
@@ -32,7 +32,7 @@ namespace Architecture
                 StringBuilder errorMessages = new StringBuilder();
                 errorMessages.Append("ERROR: Index #\n" +
                     "Message: " + ex.Message + "\n");
-                Console.WriteLine(errorMessages.ToString());
+                throw new ArgumentException(errorMessages.ToString());
             }
         }
 
@@ -52,7 +52,7 @@ namespace Architecture
                     }
                     catch (SqlException ex)
                     {
-                        WriteSqlExceptionToConsole(ex);
+                        throw new CustomSqlException("Execption thrown by RunSqlStatement() in Architecture: ", ex);
                     }
                 }
             }
@@ -61,26 +61,8 @@ namespace Architecture
                 StringBuilder errorMessages = new StringBuilder();
                 errorMessages.Append("ERROR: Index #\n" +
                     "Message: " + ex.Message + "\n");
-                Console.WriteLine(errorMessages.ToString());
+                throw new ArgumentException(errorMessages.ToString());
             }
-        }
-
-        private void WriteSqlExceptionToConsole(SqlException ex)
-        {
-            StringBuilder errorMessages = new StringBuilder();
-            for (int i = 0; i < ex.Errors.Count; i++)
-            {
-                errorMessages.Append("ERROR: Index #" + i + "\n" +
-                    "Source: " + ex.Errors[i].Source + "\n" +
-                    "Number: " + ex.Errors[i].Number.ToString() + "\n" +
-                    "State: " + ex.Errors[i].State.ToString() + "\n" +
-                    "Class: " + ex.Errors[i].Class.ToString() + "\n" +
-                    "Server: " + ex.Errors[i].Server + "\n" +
-                    "Message: " + ex.Errors[i].Message + "\n" +
-                    "Procedure: " + ex.Errors[i].Procedure + "\n" +
-                    "LineNumber: " + ex.Errors[i].LineNumber.ToString());
-            }
-            Console.WriteLine(errorMessages.ToString());
         }
     }
 }
